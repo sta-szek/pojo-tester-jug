@@ -1,10 +1,14 @@
 package pl.pojo.tester.model;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Pojo3 {
 
     private int a;
@@ -12,9 +16,4 @@ public class Pojo3 {
     private int c;
     private Pojo pojo;
 
-    public Pojo3(final int a) {
-        if (a != 123) {
-            throw new RuntimeException("  excpetion");
-        }
-    }
 }
