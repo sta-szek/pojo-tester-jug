@@ -1,7 +1,3 @@
-import java.time.ZoneOffset
-import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
-
 buildscript {
     repositories {
         mavenCentral()
@@ -43,6 +39,8 @@ configurations.all {
 }
 
 dependencies {
+    compile("org.projectlombok:lombok:1.16.12")
+
     testCompile("org.junit.jupiter:junit-jupiter-api:${JUNIT_JUPITER_VERSION}") { changing = true }
     testRuntime("org.junit.jupiter:junit-jupiter-engine:${JUNIT_JUPITER_VERSION}") { changing = true }
     testCompile("org.junit.platform:junit-platform-runner:${JUNIT_PLATFORM_VERSION}") { changing = true }
